@@ -1,0 +1,39 @@
+package core;
+
+import Types.Fourth;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Created by vinaykumar on 31/10/16.
+ */
+public class FourthYear extends Student {
+
+
+    Fourth fourth;
+    Integer marks , marksindi;
+    Map fomap;
+    public FourthYear(Fourth fourth){
+        this.fourth = fourth;
+        //this.marks = marks;
+        init();
+    }
+
+    public void init(){
+        fomap = new HashMap();
+        fomap.put(Fourth.Subject16,50);
+        fomap.put(Fourth.Subject17,50);
+        fomap.put(Fourth.Subject18,50);
+        fomap.put(Fourth.Subject19,50);
+        fomap.put(Fourth.Subject20,50);
+
+    }
+    public int calculateMarks(){
+        if(fomap.containsKey(fomap))
+        {
+            marksindi = (Integer) fomap.get(fourth);
+        }
+        return marksindi;
+    }
+}
