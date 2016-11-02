@@ -6,7 +6,5 @@ package Types;
 public enum Third {
     Subject11,
     Subject12,
-    Subject13,
-    Subject14,
-    Subject15
+    Subject13
 }

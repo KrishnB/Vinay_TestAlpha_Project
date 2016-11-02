@@ -5,6 +5,5 @@ package core;
  */
 public abstract class Student {
 
-    public int marks;
     public abstract int calculateMarks();
 }

@@ -6,7 +6,5 @@ package Types;
 public enum Second {
     Subject6,
     Subject7,
-    Subject8,
-    Subject9,
-    Subject10
+    Subject8
 }

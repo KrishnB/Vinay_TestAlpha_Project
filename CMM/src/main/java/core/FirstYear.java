@@ -11,33 +11,25 @@ import java.util.Map;
 public class FirstYear extends Student {
 
     public First first;
-    public int marksindi , marks;
+    public int marksindi;
     public Map fmap;
-    public FirstYear(First first,int marks){
+    public FirstYear(First first){
         this.first = first;
-        this.marks = marks;
         init();
     }
 
     public void init(){
         fmap = new HashMap();
         fmap.put(First.Subject1,60);
-        fmap.put(First.Subject2,60);
+        fmap.put(First.Subject2,40);
         fmap.put(First.Subject3,60);
-        fmap.put(First.Subject4,60);
-        fmap.put(First.Subject5,60);
     }
     public int calculateMarks(){
         if(fmap.containsKey(first))
         {
             marksindi = (Integer) fmap.get(first);
-            marksindi = marksindi-30;
-            if(marks < marksindi){
-                marks = 0 ;
-
-            }
         }
-        return marks;
+        return marksindi;
     }
 
 

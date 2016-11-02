@@ -1,7 +1,8 @@
 import Types.First;
-import core.Cmm;
-import core.FirstYear;
-import core.Student;
+import Types.Fourth;
+import Types.Second;
+import Types.Third;
+import core.*;
 import org.testng.annotations.Test;
 
 /**
@@ -15,32 +16,61 @@ public class StudentMarks {
     @Test
     public void totalMarks() {
 
-        firstyear = new FirstYear(First.Subject1,50);
+        //First Year Marks Inserting and Calculating the Total,Aggregate
+        firstyear = new FirstYear(First.Subject1);
         cmm.calculateTotal(firstyear);
 
-        firstyear = new FirstYear(First.Subject2,50);
+        firstyear = new FirstYear(First.Subject2);
         cmm.calculateTotal(firstyear);
 
-        firstyear = new FirstYear(First.Subject3,50);
+        firstyear = new FirstYear(First.Subject3);
         cmm.calculateTotal(firstyear);
 
-        firstyear = new FirstYear(First.Subject4,20);
-        cmm.calculateTotal(firstyear);
+        //cmm.calculateAggregate(firstyear);
+        cmm.showStudentYearlyMarks(firstyear);
 
-        firstyear = new FirstYear(First.Subject5,50);
-        cmm.calculateTotal(firstyear);
+        //Second Year Marks Inserting and Calculating the Total,Aggregate
+        secondyear = new SecondYear(Second.Subject6);
+        cmm.calculateTotal(secondyear);
 
-//        secondyear = new SecondYear(Second.Subject6);
-//        cmm.calculateTotal(secondyear);
+        secondyear = new SecondYear(Second.Subject7);
+        cmm.calculateTotal(secondyear);
 
-        cmm.calculateAggregate();
+        secondyear = new SecondYear(Second.Subject8);
+        cmm.calculateTotal(secondyear);
 
-        cmm.showStudentFinalMarks();
+        //cmm.calculateAggregate(secondyear);
+        cmm.showStudentYearlyMarks(secondyear);
+
+        //Third Year Marks Inserting and Calculating the Total,Aggregate
+        thirdyear = new ThirdYear(Third.Subject11);
+        cmm.calculateTotal(thirdyear);
+
+        thirdyear = new ThirdYear(Third.Subject12);
+        cmm.calculateTotal(thirdyear);
+
+        thirdyear = new ThirdYear(Third.Subject13);
+        cmm.calculateTotal(thirdyear);
+
+        //cmm.calculateAggregate(thirdyear);
+        cmm.showStudentYearlyMarks(thirdyear);
+
+        //Fourth Year Marks Inserting and Calculating the Total,Aggregate
+        fourthyear = new FourthYear(Fourth.Subject16);
+        cmm.calculateTotal(fourthyear);
+
+        fourthyear = new FourthYear(Fourth.Subject17);
+        cmm.calculateTotal(fourthyear);
+
+        fourthyear = new FourthYear(Fourth.Subject18);
+        cmm.calculateTotal(fourthyear);
+
+        //cmm.calculateAggregate(fourthyear);
+        cmm.showStudentYearlyMarks(fourthyear);
+
+        //Calculating the Cummulative marks of the Student
+        cmm.showCummulative();
 
 
-
-
-
-
-    }
+   }
 }

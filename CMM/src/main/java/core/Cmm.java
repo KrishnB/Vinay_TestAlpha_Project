@@ -5,22 +5,29 @@ package core;
  */
 public class Cmm {
     public Student student;
-    public int total = 0, count = 1 ;
+    public int total = 0 ,cumm = 0;
+    private String marksName;
     
     public void calculateTotal(Student student){
-        if(student.marks != 0){
+        marksName = student.getClass().getSimpleName();
         total = total + student.calculateMarks();
-        count++;}
-        else
-            total = 0;
     }
-    
-    public void calculateAggregate() {
-        total = (total / count);
+//
+//    public void calculateAggregate(Student student) {
+//        total = (total / 3);
+//    }
+
+    public void showStudentYearlyMarks(Student student){
+        total = (total / 3);
+        System.out.println(String.format("%s Student Aggregate marks is : %s",marksName,total));
+        cumm = cumm +total;
     }
 
-    public void showStudentFinalMarks(){
-        System.out.println("Student average marks in : "+ total);
+    public void showCummulative()
+    {
+        cumm = cumm/4;
+        System.out.println("Student Cummulative Marks is : " +cumm);
     }
+
 
 }

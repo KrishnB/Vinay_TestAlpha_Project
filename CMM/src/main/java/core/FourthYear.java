@@ -12,11 +12,10 @@ public class FourthYear extends Student {
 
 
     Fourth fourth;
-    Integer marks , marksindi;
+    int  marksindi;
     Map fomap;
     public FourthYear(Fourth fourth){
         this.fourth = fourth;
-        //this.marks = marks;
         init();
     }
 
@@ -25,10 +24,8 @@ public class FourthYear extends Student {
         fomap.put(Fourth.Subject16,50);
         fomap.put(Fourth.Subject17,50);
         fomap.put(Fourth.Subject18,50);
-        fomap.put(Fourth.Subject19,50);
-        fomap.put(Fourth.Subject20,50);
-
     }
+
     public int calculateMarks(){
         if(fomap.containsKey(fomap))
         {

@@ -11,11 +11,10 @@ import java.util.Map;
 public class SecondYear extends Student {
 
     Second second;
-    Integer marks , marksindi;
+    int marks , marksindi;
     Map smap;
     public SecondYear(Second second){
         this.second = second;
-        //this.marks = marks;
         init();
     }
 
@@ -23,10 +22,7 @@ public class SecondYear extends Student {
         smap = new HashMap();
         smap.put(Second.Subject6,50);
         smap.put(Second.Subject7,50);
-        smap.put(Second.Subject8,50);
-        smap.put(Second.Subject9,50);
-        smap.put(Second.Subject10,50);
-
+        smap.put(Second.Subject8,60);
     }
     public int calculateMarks(){
         if(smap.containsKey(second))
